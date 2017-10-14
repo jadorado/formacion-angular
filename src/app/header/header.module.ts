@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header.component';
+import { RoutingModule } from '../../routing/routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RoutingModule
   ],
   declarations: [HeaderComponent],
   exports: [HeaderComponent]
