@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -7,11 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  @Input() title: string;
+  title: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.data.subscribe(data => this.title = data.title);
   }
+
+  ngOnInit() { }
 
 }
