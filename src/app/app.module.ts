@@ -6,6 +6,7 @@ import { LayoutModule } from './layout/layout.module';
 import { RecordingsModule } from './recordings/recordings.module';
 import { GroupsModule } from './groups/groups.module';
 import { ConcertsModule } from './concerts/concerts.module';
+import { RoutingModule } from '../routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,9 @@ import { ConcertsModule } from './concerts/concerts.module';
   ],
   imports: [
     BrowserModule,
+
+    // Routes
+    RoutingModule,
 
     // App modules
     LayoutModule,
@@ -23,4 +27,5 @@ import { ConcertsModule } from './concerts/concerts.module';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
