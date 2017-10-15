@@ -2,8 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConcertsComponent } from '../concerts.component';
 import { RouterModule } from '@angular/router';
+import { ConcertsListComponent } from '../concerts-list/concerts-list.component';
 
-const ROUTES = [{ path: '', component: ConcertsComponent }];
+const ROUTES = [
+  {
+    path: '', component: ConcertsComponent, children:
+    [
+      { path: '', component: ConcertsListComponent }
+    ]
+  }
+];
 
 @NgModule({
   imports: [
