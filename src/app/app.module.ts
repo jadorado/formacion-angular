@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
-import { RecordingsModule } from './recordings/recordings.module';
-import { GroupsModule } from './groups/groups.module';
-import { ConcertsModule } from './concerts/concerts.module';
 import { RoutingModule } from '../routing/routing.module';
 
 @NgModule({
@@ -19,10 +16,7 @@ import { RoutingModule } from '../routing/routing.module';
     RoutingModule,
 
     // App modules
-    LayoutModule,
-    ConcertsModule,
-    GroupsModule,
-    RecordingsModule
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

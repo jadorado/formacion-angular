@@ -1,18 +1,15 @@
 import { LayoutComponent } from '../app/layout/layout.component';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ConcertsComponent } from '../app/concerts/concerts.component';
-import { GroupsComponent } from '../app/groups/groups.component';
-import { RecordingsComponent } from '../app/recordings/recordings.component';
+import { RouterModule, Routes } from '@angular/router';
 
-const ROUTES = [
+const ROUTES: Routes = [
   {
     path: '', component: LayoutComponent, data: { title: 'MusikApp' }, children:
     [
       { path: '', pathMatch: 'full', redirectTo: '/concerts' },
-      { path: 'concerts', component: ConcertsComponent },
-      { path: 'groups', component: GroupsComponent },
-      { path: 'recordings', component: RecordingsComponent }
+      { path: 'concerts', loadChildren: 'app/concerts/concerts.module#ConcertsModule' },
+      { path: 'groups', loadChildren: 'app/groups/groups.module#GroupsModule' },
+      { path: 'recordings', loadChildren: 'app/recordings/recordings.module#RecordingsModule' }
     ]
   },
 ];
