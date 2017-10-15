@@ -1,4 +1,4 @@
-import { LayoutComponent } from '../app/layout/layout.component';
+import { LayoutComponent } from '../layout/layout.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -20,4 +20,3 @@ const ROUTES: Routes = [
 })
 export class RoutingModule {
 }
-
