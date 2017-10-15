@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "json-server": "json-server --watch src/assets/db/db.json",
+    "json-server": "json-server --watch --no-cors src/assets/db/db.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
