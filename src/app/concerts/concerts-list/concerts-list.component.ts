@@ -10,13 +10,13 @@ import { Concert } from '../concert';
 export class ConcertsListComponent implements OnInit {
 
   concerts: Concert[];
+  headings = ['#', 'Grupo', 'Nombre', 'Ciudad', 'Sede'];
+  fields = ['id', 'group', 'name', 'city', 'venue'];
 
   constructor(private concertsService: ConcertsService) { }
 
   ngOnInit() {
-    this.concertsService.getConcerts().subscribe(concerts => {
-      console.log(concerts);
-    });
+    this.concertsService.getConcerts().subscribe(concerts => this.concerts = concerts);
   }
 
 }

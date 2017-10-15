@@ -4,11 +4,13 @@ import { ConcertsComponent } from './concerts.component';
 import { ConcertsRoutingModule } from './concerts-routing/concerts-routing.module';
 import { ConcertsService } from './concerts.service';
 import { ConcertsListComponent } from './concerts-list/concerts-list.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     ConcertsRoutingModule,
+    SharedModule
   ],
   declarations: [ConcertsComponent, ConcertsListComponent],
   providers: [ConcertsService]

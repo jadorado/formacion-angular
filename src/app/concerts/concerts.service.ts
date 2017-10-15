@@ -8,8 +8,8 @@ export class ConcertsService {
 
   constructor(private http: HttpClient) { }
 
-  getConcerts(): Observable<Concert> {
+  getConcerts(): Observable<Concert[]> {
 
-    return this.http.get<Concert>('http://localhost:3000/concerts');
+    return this.http.get<Concert[]>('http://localhost:3000/concerts');
   }
 }
