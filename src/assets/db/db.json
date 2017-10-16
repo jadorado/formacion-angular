@@ -8,6 +8,18 @@
       "grupo": "Dios salve a la reina"
     }
   ],
-  "groups": [],
+  "groups": [
+    {
+      "id": 1,
+      "name": "The Beatles",
+      "genre": "Pop - Rock",
+      "members": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ]
+    }
+  ],
   "recordings": []
 }
