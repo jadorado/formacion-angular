@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import { GroupsComponent } from '../groups.component';
 import { RouterModule } from '@angular/router';
 import { GroupsListComponent } from '../groups-list/groups-list.component';
+import { GroupsFormComponent } from '../groups-form/groups-form.component';
 
 const ROUTES = [
   {
     path: '', component: GroupsComponent, children:
     [
-      { path: '', component: GroupsListComponent }
+      { path: '', component: GroupsListComponent },
+      { path: 'new', component: GroupsFormComponent }
+
     ]
   }
 ];
