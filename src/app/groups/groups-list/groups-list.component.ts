@@ -11,7 +11,7 @@ export class GroupsListComponent implements OnInit {
 
   concerts: Group[];
   headings = ['#', 'Nombre', 'Género', 'Miembros'];
-  fields = ['id', 'name', 'genre', 'members'];
+  fields = ['id', 'name', 'genre', 'membersList'];
 
   constructor(private groupsService: GroupsService) { }
 

@@ -14,10 +14,18 @@
       "name": "The Beatles",
       "genre": "Pop - Rock",
       "members": [
-        "John Lennon",
-        "Paul McCartney",
-        "George Harrison",
-        "Ringo Starr"
+        {
+          "name": "John Lennon"
+        },
+        {
+          "name": "Paul McCartney"
+        },
+        {
+          "name": "George Harrison"
+        },
+        {
+          "name": "Ringo Starr"
+        }
       ]
     }
   ],

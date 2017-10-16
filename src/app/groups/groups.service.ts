@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Group } from './group';
 import { environment } from '../../environments/environment';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class GroupsService {
@@ -11,6 +12,7 @@ export class GroupsService {
 
   getGroups(): Observable<Group[]> {
 
-    return this.http.get<Group[]>(`${environment.apiUrl}/groups`);
+    return this.http.get<Group[]>(`${environment.apiUrl}/groups`)
+               .map(groups => groups.map(group => new Group(group)));
   }
 }

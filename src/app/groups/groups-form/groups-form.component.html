@@ -27,6 +27,24 @@
            formControlName="genre">
   </div>
 
+  <div formArrayName="members">
+
+    <div class="form-group" *ngFor="let member of members.controls; let i = index" [formGroupName]="i">
+      <div class="form-group">
+        <label for="name">Nombre del componente</label>
+        <input type="text"
+               class="form-control"
+               id="memberName" name="memberName"
+               placeholder="Nombre del componente"
+               formControlName="name">
+      </div>
+    </div>
+
+    <button class="btn btn-primary float-rigth" (click)="addMember()" type="button" [disabled]="members.invalid">Añadir
+      componente
+    </button>
+  </div>
+
   <div class="float-right">
     <button class="btn" [routerLink]="['/concerts']" type="button">Cancelar</button>
     <button class="btn btn-primary ml-2" type="submit" [disabled]="form.invalid">Guardar</button>
