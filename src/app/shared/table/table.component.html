@@ -1,12 +1,12 @@
 <table class="table">
   <thead>
   <tr>
-    <th *ngFor="let heading of headings">{{heading}}</th>
+    <th class="table-header" *ngFor="let heading of headings">{{heading}}</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let row of data" (click)="onClick(row)">
-    <td *ngFor="let field of fields">{{row[field]}}</td>
+    <td *ngFor="let field of fields" class="table-row">{{row[field]}}</td>
   </tr>
   </tbody>
 </table>
