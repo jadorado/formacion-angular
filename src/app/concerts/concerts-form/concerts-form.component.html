@@ -1,0 +1,73 @@
+<form class="mt-3" (ngSubmit)="submit()" novalidate #form="ngForm">
+
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="number"
+           class="form-control"
+           id="id" name="id"
+           placeholder="Id"
+           [(ngModel)]="concert.id"
+           [class.is-invalid]="idInput.invalid && idInput.touched"
+           required
+           #idInput="ngModel">
+    <div class="invalid-feedback" *ngIf="idInput.invalid && idInput.touched">El id es obligatorio</div>
+  </div>
+
+  <div class="form-group">
+    <label for="group">Grupo</label>
+    <input type="text"
+           class="form-control"
+           id="group" name="group"
+           placeholder="Grupo"
+           [(ngModel)]="concert.group"
+           [class.is-invalid]="groupInput.invalid && groupInput.touched"
+           required
+           #groupInput="ngModel">
+    <div class="invalid-feedback" *ngIf="groupInput.invalid && groupInput.touched">El grupo es obligatorio</div>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text"
+           class="form-control"
+           id="name" name="name"
+           placeholder="Nombre"
+           [(ngModel)]="concert.name"
+           [class.is-invalid]="nameInput.invalid && nameInput.touched"
+           required
+           #nameInput="ngModel">
+    <div class="invalid-feedback" *ngIf="nameInput.invalid && nameInput.touched">El nombre es obligatorio</div>
+  </div>
+
+  <div class="form-group">
+    <label for="city">Ciudad</label>
+    <input type="text"
+           class="form-control"
+           id="city" name="city"
+           placeholder="Ciudad"
+           [(ngModel)]="concert.city"
+           [class.is-invalid]="cityInput.invalid && cityInput.touched"
+           required
+           #cityInput="ngModel">
+    <div class="invalid-feedback" *ngIf="cityInput.invalid && cityInput.touched">La ciudad es obligatoria</div>
+  </div>
+
+  <div class="form-group">
+    <label for="venue">Sede</label>
+    <input type="text"
+           class="form-control"
+           id="venue" name="venue"
+           placeholder="Sede"
+           [(ngModel)]="concert.venue"
+           [class.is-invalid]="venueInput.invalid && venueInput.touched"
+           required
+           #venueInput="ngModel">
+    <div class="invalid-feedback" *ngIf="venueInput.invalid && venueInput.touched">La sede es obligatoria</div>
+  </div>
+
+  <div class="float-right">
+    <button class="btn" [routerLink]="['/concerts']" type="button">Cancelar</button>
+    <button class="btn btn-primary ml-2" type="submit" [disabled]="form.invalid">Guardar</button>
+  </div>
+
+</form>

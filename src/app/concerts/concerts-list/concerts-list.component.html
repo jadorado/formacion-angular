@@ -1,1 +1,6 @@
-<app-table [data]="concerts" [fields]="fields" [headings]="headings"></app-table>
+<button [routerLink]="['new']" class="btn btn-primary mt-3 mb-3 float-right">Nuevo Concierto</button>
+
+<app-table [data]="concerts"
+           [fields]="fields"
+           [headings]="headings"></app-table>
+
