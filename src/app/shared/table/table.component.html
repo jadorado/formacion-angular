@@ -5,7 +5,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let row of data">
+  <tr *ngFor="let row of data" (click)="onClick(row)">
     <td *ngFor="let field of fields">{{row[field]}}</td>
   </tr>
   </tbody>
